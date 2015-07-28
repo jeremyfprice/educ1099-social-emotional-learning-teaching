@@ -2,6 +2,7 @@
 *.aux
 *.log
 *.gz
+*.gz(busy)
 
 # Windows image file caches
 Thumbs.db
