@@ -22,7 +22,10 @@
    version="1.1"
    inkscape:version="0.48.4 r9939"
    sodipodi:docname="Social and Emotional Approaches to Teaching and Learning.svg"
-   style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;font-family:Arial">
+   style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;font-family:Arial"
+   inkscape:export-filename="C:\Users\jprice27\Dropbox\courses\educ1099\syllabus-img\sealt.png"
+   inkscape:export-xdpi="100"
+   inkscape:export-ydpi="100">
   <metadata
      id="metadata214">
     <rdf:RDF>
@@ -31,6 +34,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -811,6 +815,11 @@
          y="-334.37933"
          style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Source Sans Pro;-inkscape-font-specification:Source Sans Pro"
          id="tspan4542">attitudes in the field?</tspan></text>
+    <path
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;font-family:Arial"
+       d="m 0.73278446,-625.06896 992.15512554,0"
+       id="path4257-9-1"
+       inkscape:connector-curvature="0" />
   </g>
   <text
      xml:space="preserve"
