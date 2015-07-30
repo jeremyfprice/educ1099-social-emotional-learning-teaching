@@ -3,6 +3,7 @@
 *.log
 *.gz
 *.gz(busy)
+*.out
 
 # This is a course, so also ignore the 'readings' folder which can be retrieved from institutional libraries
 /readings
