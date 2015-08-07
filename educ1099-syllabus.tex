@@ -69,17 +69,19 @@
 \newcommand{\doccls}[1]{\texttt{#1}}% document class name
 \newcommand{\docclsopt}[1]{\texttt{#1}}% document class option name
 
+\newcommand{\gentopic}[1]{\begin{fullwidth}\begin{center}\faKey~\textsf{#1}\end{center}\end{fullwidth}}
 \newcommand{\tabpq}{\faQuestionSign\medspace\textit{Priming Questions}}
 \newcommand{\tabread}{\faBook\medspace\textit{Readings}}
-\newcommand{\tabtools}{\faWrench\medspace\textit{Tools}}
-\newcommand{\tabtweet}{\faLightbulb\medspace\textit{Reflection Task} & Surprise Tweet Due Friday \\}
-\newcommand{\tabcheck}{\faLightbulb\medspace\textit{Reflection Task} & Metacognitive Check Due Friday (no Surprise Tweet) \\}
 \newcommand{\tabperformance}{\faTasks\medspace\textit{Performances}}
+\newcommand{\tabdt}{\faCalendar\medspace\textit{Week Of}}
+\newcommand{\tabcheckin}{\faPagelines\medspace\textit{Check-In Performances}}
+\newcommand{\tabbreak}{\begin{fullwidth}\begin{center}\faAsterisk\faAsterisk\faAsterisk\\\end{center}\end{fullwidth}}
+\newcommand{\specialweek}[1]{\begin{fullwidth}\begin{center}\textbf{\faBullhorn\medspace Special Week: #1 \medspace\faBullhorn}\end{center}\end{fullwidth}}
 \newenvironment{tabsched}
 	{\small
 	\begin{tabular}{p{1.5in}p{4.5in}}
-	\toprule}
-	{\bottomrule
+	\midrule}
+	{\midrule
 	\end{tabular}
 	\normalsize}
 
@@ -100,14 +102,14 @@
 \newcommand{\laborday}{Labor Day on Monday, September 7 (no class)}
 \newcommand{\roshhashanah}{Rosh Hashanah on Monday, September 14 (class via VoiceThread)}
 \newcommand{\yomkippur}{Yom Kippur on Wednesday, September 23 (class via VoiceThread)}
-\newcommand{\finisemester}{Last Day of Class, Wednesday, October 7}
+\newcommand{\finisemester}{\begin{fullwidth}\begin{center}\large\textbf{\faFlagCheckered~Last Day of Class, Wednesday, October 7~\faFlagCheckered}\normalsize\end{center}\end{fullwidth}}
 
 \begin{document}
 
 \maketitle% this prints the handout title, author, and date
 
 \begin{abstract}
-Welcome to EDUC1099, Social and Emotional Approaches to Learning and Teaching. Blah blah blah.\end{abstract}
+Welcome to EDUC1099, Social and Emotional Approaches to Learning and Teaching. Blah blah blah blah.\end{abstract}
 
 %\addvspace{1.5in}
 \bigskip
@@ -115,7 +117,11 @@ Welcome to EDUC1099, Social and Emotional Approaches to Learning and Teaching. B
 \begin{fullwidth}
 	\begin{center}
 		\includegraphics[width=0.40\linewidth]{sealt-logo.jpg}
+
+		\includegraphics[width=0.40\linewidth]{life-hard.png}
+
 		\bigskip
+
 		\Large
 		\enquote{It seems to me that that, finally, is what good teaching is all about\ldots~~Somehow or another, skill and knowledge are integrated into some kind of a human connection.}~-~Mike Rose
 		\normalsize
@@ -142,19 +148,20 @@ Welcome to EDUC1099, Social and Emotional Approaches to Learning and Teaching. B
     Mondays & Wednesdays & Fridays \\
     \midrule
     10:00am - 12:00pm & 10:00am - 12:00pm & 10:00am - 12:00pm \\
+ 	& & 1:00pm - 2:00pm \\
     \bottomrule
   \end{tabular}
 \end{table}
 \newpage
 
-\part{The EDUC2201 Contract}
+\part{The EDUC1099 Contract}
 \begin{fullwidth}
 
 \textit{\textbf{Your first job} is to work at developing an academic relationship with me as your professor} just as you should work to develop a relationship with all of your professors. This job for you extends to \emph{all} of your classes; you will find that putting the effort into building an academic relationship with your professors pays off. Putting effort into building an academic relationship with your professor will make your other two jobs flow much more smoothly. I am (and all of your professors are) here to help you succeed. In order to help me support you, you need to help me know what you need. If you have a question, if you don't understand something, if you are having trouble getting to class, if you need a different explanation of something, \emph{talk to me}. Sometimes this means coming to my Student Drop-In Hours or scheduling an appointment with me outside of class. I work very hard to get to know my students in class, but I get to know them even better (and I can provide more targeted support) when my students talk with me outside of class.
 
 \textit{\textbf{Your second job} is to get to know and learn how to use all of the course materials.} I will provide you with information, models, and scaffolding in the syllabus and other companion documents. These companion documents include \texttt{Reference Sheets}, \texttt{Project Packages}, and \texttt{Model Assignments}. Success in this class involves organizing and understanding these sources of information; we will go over the syllabus in depth during the first class, and I am happy to meet with you to discuss the course and its requirements further.
 
-\textit{\textbf{Your third job} is to consider the long-term returns you will gain from putting effort into the work of this course.} When you are in college, your primary work responsibilities are to your coursework. You are in the Teacher Education Program and the effort you put into your coursework will pay off in terms of becoming a better prepared and more successful teacher. It is hard to find a balance between these long-term payoffs and short term needs (such as paying for rent, clothing, or entertainment and fun activities). You may also be more responsible for your time and attention than you ever have been before, so it is easy to slip into a pattern of missing classes, sleeping in, or spending late nights at parties. I am more than happy to help you find the right balance and to connect you with people and resources than can provide further support.
+\textit{\textbf{Your third job} is to consider the long-term returns you will gain from putting effort into the work of this course.} When you are in college, your primary work responsibilities are to your coursework. You are in the Teacher Education Program and the effort you put into your coursework will pay off in terms of becoming a better prepared and more successful teacher. It is hard to find a balance between these long-term payoffs and short term needs (such as paying for rent, clothing, or entertainment and fun activities). You may also be more responsible for your time and attention than you ever have been before, so it is easy to slip into a pattern of missing classes. I am more than happy to help you find the right balance and to connect you with people and resources than can provide further support.
 
 \textit{\textbf{My jobs as your professor}} include designing an engaging, relevant, productive course, facilitating class activities that I believe will be effective in the learning process, assessing your work in a fair, timely manner, and creating a safe, supportive space in which everyone can be who she or he is and freely contribute to the class. I am here to support you as you succeed in this course and in the Teacher Education Program, but I can only do so with your help.
 
@@ -201,7 +208,7 @@ Welcome to EDUC1099, Social and Emotional Approaches to Learning and Teaching. B
 
 \begin{marginfigure}%
 	\begin{center}
-		\includegraphics[width=1\linewidth]{frazz-mistakes.png}
+		\includegraphics[width=1\linewidth]{cp-pic3.png}
 	\end{center}
 \end{marginfigure}
 
@@ -236,115 +243,63 @@ I completely understand that life happens and emergencies, illnesses, and other 
 
 \begin{marginfigure}%
 	\begin{center}
-		\includegraphics[width=1\linewidth]{frazz-homework.png}
+		\includegraphics[width=1\linewidth]{lp-pic.png}
 	\end{center}
 \end{marginfigure}
 
-\newthought{Performances of Understanding are a way for you to demonstrate what you understand while also building your understanding.} These performances can be ongoing short check-ins or projects that can take anywhere from 2 to 5 weeks to complete.
+\newthought{Performances of Understanding are a way for you to demonstrate what you understand while also building your understanding.} The \textit{Performances of Understanding}\footnote{Performances of Understanding are a concept from the Teaching for Understanding framework.} are what you produce in each of the 4 units of the course. Each of these Performances are designed to not only help me see what you understand, but also to help you deepen your knowledge and develop your skills around the use of technology in teaching and learning. You will receive a \textsf{Project Package} at the beginning of each unit which will include more specifics about what I expect from you, including a copy of the rubric that I will be using to evaluate your work. In addition to the Culminating Performances themselves, you will engage in Check-In Performances to help you get ready for the Culminating Performances.
 
-\section{Become a Scholar by Building Your Metacognitive Skills}
-\newthought{Metacognition means "thinking about thinking."} Being aware of your own thinking will help you learn more and help you succeed throughout your college career. It is also something that I hope you will help your own students develop when you are a teacher. Metacognition happens in part through (1)~setting goals, (2)~being intentional about your effort, and (3)~reflecting on your learning.
+\section{Unit 1:  Introducing Social and Emotional Approaches to Teaching and Learning}
 
-\subsection{Learning Tweets}
-You will be writing a "Learning Tweet" each week. You won't be using Twitter to write your tweets (you will be writing it directly to me using \texttt{TaskStream}), \marginnote{Your Learning Tweet should be a little longer than the typical tweet on Twitter: no less than three sentences.}but just like Twitter your Learning Tweet will be on the short side. You will be asked to post a Learning Tweet during some weeks directly on the readings, some weeks on class discussions, and some weeks on anything from class that surprised you. \emph{Make sure that your Learning Tweets have something to do with \textbf{this} class}.
+In this unit, we will be exploring a framework for social and emotional approaches to teaching and learning. We will see how this framework intersects with the real lives of teachers and learners and the work in which they engage together. As a way to help you make these connections, you will be keeping a two-day journal in which you document when aspects of this framework intersect with your own experiences as a learner. You will then write a comprehensive, analytical, and rigorous reflection on what happened, how these experiences intersected with the framework, and how you now see things differently.
 
-The task of each Learning Tweet will be provided in TaskStream. The structure of the general Learning Tweet that focuses on something from the class that surprised you will follow the \texttt{Moment of Surprise}, \texttt{Why It Was Surprising}, and \texttt{What This Tells Me} format:
+\medskip\noindent\textit{$\mapsto$~Your 48-Hour Social-Emotional Journal is worth \textbf{20 points}.}
 
-\begin{itemize}
-	\itemsep-0.5em
-	\item \texttt{Moment of Surprise:} a short summary of the reading, discussion, or activity you are writing about;
-	\item \texttt{Why It Was Surprising:} a short description of what about the reading, discussion, or activity caught your attention, surprised or intrigued you;
-	\item \texttt{What This Tells Me:} your "take away" from this surprise, what you learned, how your perspective has changed.
-\end{itemize}
+\section{Unit 2: The Impact of Stories on Teaching and Learning}
 
-The Learning Tweets allow you to make sense of your experiences and gives me a sense of what you are taking away from the class. I often readjust my teaching based on what students tell me through the Surprise Tweets. Keeping track of these "surprises" is a form of ongoing reflection and is an essential component of learning and teaching. We will be reading a short article on surprises in learning during the first week.
+When examining the social and emotional aspects of teaching and learning, it is important to recognize the stories we tell about ourselves, the stories we construct around others, and the stories that others tell about us. The story of the "redneck" is one that is intertwined with the cultural history of Appalachia, and is mostly not flattering. We will learn about the history of this phrase, learn about its significance, and work to "re-write" its meaning through creative artifacts. This re-writing is important to help students who may live out the stories written for them instead write the stories and live the lives they prefer.
 
-\medskip\noindent\textit{$\mapsto$~Each Surprise Tweet is worth 10 points, for a total of 120 points.}
+\medskip\noindent\textit{$\mapsto$~Your Redneck Project is worth \textbf{20 points}.}
 
-\subsection{Metacognitive Self-Checks}
+\section{Unit 3: Your Work to Model Social and Emotional Approaches to Teaching and Learning}
 
-You will complete a \texttt{Metacognitive Self-Check} at three points in the semester to allow you to reflect on your learning and participation practices for the class. You will choose three metacognitive practices that you wish to improve on over the course of the semester. You will then complete a rubric on these three practices,\marginnote{The Beginning-Developing-Succeeding rubric scale is based on educational psychologist Carol Dweck's idea of a \textit{growth mindset}. Adopting a growth mindset will help you recognize that you continuously learn.} rating yourself on a scale of Beginning-Developing-Succeeding. These Self-Checks will also allow me to see how you see yourself as a learner and a member of the class and allow me to provide you with added feedback, support and resources to help you succeed as a learner in the course and in college in general. Many students have found this to be a useful way to help them focus on improved participation in the class. You will not have to complete a Learning Tweet when a Metacognitive Self-Check is due.
+Modeling is one of the most powerful tools for teaching. It is therefore important to model social and emotional practices in your own teaching and learning lives as an educator. Each person in the class will select a social-emotional practice and conduct research into what it is, what purpose it serves, how it works, and what the potential outcomes are. You will create a short poster presentation for a Social-Emotional Practices Conference. You will be able to engage classmates in conversation about these practices.
 
-\medskip\noindent\textit{$\mapsto$~Each Self-Check is worth \textbf{20 points}, for a total of \textbf{60 points}.}
+\medskip\noindent\textit{$\mapsto$~Your presentation in the Social-Emotional Practices Conference is worth \textbf{20 points}.}
 
-\subsection{Reflection Write-Ups}
+\subsection{Unit 4: Social and Emotional Teaching and Learning in the Wide World}
 
-Reflecting on your work and your practice is an important part of being a teacher. I will help you develop these skills through structured reflections on your experiences throughout the semester. Each reflection will follow a slightly different structure, so make sure that you look closely at what is required of teh reflection. The basic parts of a reflection involve \texttt{framing} and \texttt{reframing}. \marginnote{\textit{Framing} refers to describing in detail the way that your project was completed. \textit{Reframing} refers to describing in detail how you\textemdash{}or a make-believe educator\textemdash{}might use your project in the future.}This method of reflection will allow you to look back on what you've done as well as project into the future as to how you might use what you have learned in your own teaching practices.
+One of the most important jobs of an educator is to facilitate an environment to promote learning, and planning this environment is a necessary part of this process. As such, as your last performance, you will be planning an activity that incorporates principles and practices of social-emotional learning and teaching. This plan is a condensed version of the lesson plan format you will be expected to write later in your career as a teacher education candidate. I hope that you will continue
 
-\medskip\noindent\textit{$\mapsto$~Each Reflection is worth \textbf{10\% of Culminating Performance points}. The Reflection Write-Up is a required part of the project process and your submission will be returned to you if you do not also submit a Reflection Write-Up.}
+\medskip\noindent\textit{$\mapsto$~Your Social-Emotional Activity Plan is worth \textbf{20 points}.}
 
-\subsection{Passport Activities}
-Fairmont State University is looking to improve the learning experience of all students and help students build a successful academic career from admissions to graduation. Part of building this success is to become involved in campus life. As such, as a student in this course, you will \marginnote{Certain individuals who are already participating in the life of the University may qualify for an exemption.}required to participate in the Fairmont State Passport Program. You are required to create a plan of action for attending Passport Activities over the course of the semester and attend them. Of these activities, you will attend one of two "core" activities \marginnote{The two core activities are Dr. Sidwell's \textit{Personal Health \& Safety Plan} or Dr. Rohrbaugh's \textit{The Human Brain: Studying for University Classes}.}and write a reflection on your experience. You will also attend \textit{\textbf{four additional Passport Activities}}. The Passport Activities options will be provided for you early in the semester. If you have a Passport Activity you would like to organize, please let me know.
+\section{Cross-Unit Considerations}
 
-\medskip\noindent\textit{$\mapsto$~Attendance at a Passport Core Activity and the written reflection is worth \textbf{60 points}. Attendance and short reflections at four additional Passport Elective Activities are worth 10 points each for a total of \textbf{40 points}.}
+Blah
 
-\section{Intermediate and Culminating Performances of Understanding}
-
-The \textit{Performances of Understanding}\footnote{Performances of Understanding are a concept from the Teaching for Understanding framework. You will be learning about this framework in depth during Unit 4 (The Quest to Build a WebQuest).} are what you produce in each of the 5 units of the course. Each of these Performances are designed to not only help me see what you understand, but also to help you deepen your knowledge and develop your skills around the use of technology in teaching and learning. You will receive a \textsf{Project Package} at the beginning of each unit which will include more specifics about what I expect from you, including a copy of the rubric that I will be using to evaluate your work. In addition to the Culminating Performances themselves, you will engage in Intermediate Performances to help you get ready for the Culminating Performances.
-
-\subsection{Unit 0: Getting Started and Situated}
-
-The first week of class will be dedicated to helping everyone get into the flow of the course. We will be establishing expectations and practices for the semester. You will be completing an open-syllabus "quiz." This will allow you to get familiar with the syllabus, the expectations of the class and \texttt{TaskStream}.
-
-\medskip\noindent\textit{$\mapsto$~Your Syllabus Quiz is worth \textbf{10 points}.}
-
-
-\subsection{Unit 1: Communicating the Role of Technology in Education}
-
-This first unit will introduce you to the idea of technology in education and challenge you to consider why using technology to support learning is important. This unit is also structured to help you succeed on the Praxis Core Academic Skills for Educators Exam. The essay you will write is similar to the argumentative essay you will write for the Core Exam. I will be helping you through the writing process that you can then bring into your own classrooms to support your own students when you are a teacher. In addition to writing the essay, I will be requiring you to accomplish two other steps: \textit{take a draft of your paper to the Writing Center} and \textit{meet with me to discuss the feedback on your paper}. The Writing Center is an excellent free on-campus resource for you. In our meeting, I will help you make good use of the feedback on your essay and it will help us get to know each other better.
-
-\medskip\noindent\textit{$\mapsto$~Your visit to the Writing Center is worth \textbf{40 points}. Your Argumentation Essay Culminating Performance is worth \textbf{90 points}.}
-
-\subsection{Unit 2: Creating an Online Book for All Learners}
-
-As a way to engage in digital authoring and inclusive digital practices, you will write an online book for high school or college students about a time when you felt like you persisted, belonged, or saw things in a new way in order to succeed in a learning (although not necessarily classroom) environment. Helping students persist, develop a sense of belonging, and seeing ideas or problems in new ways has been shown to support academic achievement; this unit will help you explore your own experiences as well as help to prepare you to impress the value of the same practices on your future students.
-
-\medskip\noindent\textit{$\mapsto$~Your Outline is worth \textbf{20 points} and your Storyboard is worth \textbf{40 points}. The Online UDL Book is worth \textbf{150 points}.}
-
-\subsection{Unit 3: Exploring the Many Sides of Diversity}
-
-Fully understanding\textemdash{}and supporting\textemdash{}diversity in the classroom will help you become a more successful teacher. This WebQuest will lead you through a number of activities to help you recognize, understand, and advocate for classroom diversity. You will be working as a team to create a public exhibit illustrating diversity through music. You will also become familiar with the structure of WebQuests.
-
-\medskip\noindent\textit{$\mapsto$~Your Diversity Poster Culminating Performance is worth \textbf{90 points}.}
-
-\subsection{Unit 4: The Quest to Build a WebQuest}
-
-As a way to engage in constructing digital learning environments and "get your feet wet" in using the Teaching for Understanding framework, you will construct a well-structured WebQuest for elementary, middle, or high school pupils on a particular topic of your choosing. As part of the process, you will create a "map" with Prezi using the Teaching for Understanding framework. You will also use additional media from other digital tools covered over the course of the semester in your WebQuest.
-
-\medskip\noindent\textit{$\mapsto$~Your TfU Map Intermediate Performance is worth \textbf{100 points}. Your WebQuest Culminating Performance is worth \textbf{180 points}.}
+\medskip\noindent\textit{$\mapsto$~These combined considerations are worth \textbf{20 points}.}
 
 \section{Course Point Breakdown}
 
-\marginnote{900-1000 points is an A, 800-899 points is a B, 700-799 points is a C, 650-699 is a D, 649 or less is an F.}Keep in mind that \emph{\textbf{you earn your grade}}. I do not "give" you a grade. As a teacher, I place a great deal of emphasis on becoming aware of learning processes and progress. \emph{This is a practice that is important to bring to your own students,} so I want to give you a head start.
+\marginnote{90-100 points is an A, 80-89 points is a B, 70-79 points is a C, 65-69 is a D, 64 or less is an F.}Keep in mind that \emph{\textbf{you earn your grade}}. I do not "give" you a grade. As a teacher, I place a great deal of emphasis on becoming aware of learning processes and progress. \emph{This is a practice that is important to bring to your own students,} so I want to give you a head start.
 
 \bigskip
-
-% The following scores in the table are correct and add up to 1000 (7/28/2015)
 
 \begin{tabular}{clr}
 	\toprule
 	Unit & Performance & Points \\
 	\midrule\midrule
-	0 & Syllabus "Quiz" & 10 \\
+	1 & 48-Hour Social-Emotional Journal & 20 \\
 	\midrule
-	1 & Writing Center Feedback Intermediate Performance & 40 \\
-	& Argument Paper Culminating Performance & 90 \\
+	2 & The Redneck Project & 20 \\
 	\midrule
-	2 & Outline for UDL Book Intermediate Performance & 20 \\
-	& Storyboard for UDL Book Intermediate Performance & 40 \\
-	& UDL Book Culminating Performance & 150 \\
+	3 & Social-Emotional Practices Conference & 20 \\
 	\midrule
-	3 & Diversity Poster Culminating Performance & 90 \\
+	4 & Social-Emotional Activity Plan & 20 \\
 	\midrule
-	4 & Prezi Teaching for Understanding Map Intermediate Performance  & 100 \\
-	& WebQuest Culminating Performance & 180 \\
-	\midrule
-	MC & Preparatory \& Reflection Tweets (Total) & 120 \\
-	MC & Metacognitive Checks (Total) & 60 \\
-	MC & Passport Core Activity & 60 \\
-	MC & Passport Elective Activities (Total) & 40 \\
+	ALL & Check-In Performances, Participation, and Growth & 20 \\
 	\midrule\midrule
-	\multicolumn{2}{l}{\textbf{Total}} & \textbf{1000} \\
+	\multicolumn{2}{l}{\textbf{Total}} & \textbf{100} \\
 	\bottomrule
 \end{tabular}
 
@@ -354,39 +309,41 @@ As a way to engage in constructing digital learning environments and "get your f
 
 \begin{marginfigure}
 	\begin{center}
-		\includegraphics[width=0.4\linewidth]{frazz-time.png}
+		\includegraphics[width=0.4\linewidth]{sc-pic.png}
 	\end{center}
 \end{marginfigure}
 
 \medskip
 
-\section{Intermediate and Culminating Performances of Understanding Due Dates}
+\section{Check-In and Culminating Performances of Understanding Due Dates}
 \begin{tabular}{clr}
 	\toprule
 	Unit & Performance & Due Date \\
 	\midrule\midrule
-	0 & Syllabus "Quiz" & January 26 \\
+	1 & What Do I Notice? & August 21 \\
+	& 48-Hour Social-Emotional Journal & August 31 \\
 	\midrule
-	1 & Writing Center Feedback Intermediate Performance & February 13 \\
-	& Argument Paper Culminating Performance & February 20 \\
-	& Meeting with Professor & March 15 \\
+	2 & Re-Remembering Rednecks & September 4 \\
+	& The Redneck Project & September 14 \\
 	\midrule
-	2 & Outline for UDL Book Intermediate Performance & February 23 \\
-	& Storyboard for UDL Book Intermediate Performance & February 27 \\
-	& UDL Book Culminating Performance & March 13 \\
+	3 & Practices Organizer & September 18 \\
+	& Social-Emotional Practices Conference & September 28 \\
 	\midrule
-	3 & Diversity Poster Culminating Performance & March 27 \\
-	\midrule
-	4 & Prezi Teaching for Understanding Map Intermediate Performance  & April 13 \\
-	& WebQuest Culminating Performance & May 1 \\
+	4 & Activity Organizer & October 2 \\
+	& Social-Emotional Activity Plan & October 12 \\
 	\bottomrule
 \end{tabular}
 
-\section{Unit 0: Getting Situated and Started}
+\begin{fullwidth}
+	\section{Unit 1: Introducing Social and Emotional Approaches to Teaching and Learning}
+\end{fullwidth}
 
-\subsection{Week of \weekone}
+\gentopic{Values and attitudes influence the educational process, are brought in by both students and educators,\\and can be developed through intentional efforts.}
+
 
 \begin{tabsched}
+	\tabdt & \weekone \\
+	\midrule
 	\tabpq & What are some of the rules of the "program" for "doing school"? \\
 	& Should an effort be made to "deprogram" students from "doing school"? \\
 	& What does the author mean by "surprise," and why is surprise important for learning? \\
@@ -394,50 +351,48 @@ As a way to engage in constructing digital learning environments and "get your f
 	\tabread & How Deprogramming Kids From How To Do School Could Improve Learning (\url{http://goo.gl/pnkkRM}) \\
 	& Surprise Journal: Notice the Unexpected (\url{http://goo.gl/h2ESqJ}) \\
 	\midrule
-	\tabtools & TaskStream (\url{https://www.taskstream.com/}) \\
-	& Google Documents (\url{https://docs.google.com/}) \\
-	\midrule
-	\tabtweet
+	\tabcheckin & \textbf{What have you noticed?} Due Friday, August 21 \\
 \end{tabsched}
 
-\section{Unit 1: Communicating the Role of Technology in Education}
-
-\subsection{Week of \weektwo}
+\tabbreak
 
 \begin{tabsched}
+	\tabdt & \weektwo \\
+	\midure
 	\tabpq & According to Grant Wiggins, what are the differences between an \emph{argument} and a persuasive essay? \\
 	& According to John Spencer, how is it \emph{about} the technology? \\
 	\midrule
 	\tabread & Argument\textemdash{}the Core of the Common Core\textemdash{}and a clarifying example (\url{http://goo.gl/1nhpHs}) \\
 	& Actually, It Is About the Technology (\url{http://goo.gl/BE79FJ}) \\
 	\midrule
-	\tabtools & Padlet (\url{https://padlet.com/}) \\
-	& ScreenChomp (\url{http://www.techsmith.com/screenchomp.html}) \\
-	\midrule
-	\tabcheck
-	\midrule
-	\tabperformance & Syllabus "Quiz" Due Monday, January 26 \\
+	\tabperformance & \textbf{48-Hour Social-Emotional Journal} Due Monday, August 31 \\
 \end{tabsched}
 
-\subsection{Week of \weekthree}
+\begin{fullwidth}
+	\section{Unit 2: The Impact of Stories on Teaching and Learning}
+\end{fullwidth}
+
+\gentopic{The stories that we tell about ourselves and others influence the attitudes and values that we bring\\to our lives and learning experiences.}
 
 \begin{tabsched}
+	\tabdt & \weekthree \\
+	\midrule
 	\tabpq & According to Tom Whitby, what are the differences between \textit{then} and \textit{now}? \\
 	& What is the advice Bill Ferriter gives to help make students more engaged in learning with technology? \\
 	\midrule
 	\tabread & The Longer View: EdTech and 21st-Century Education (\url{http://goo.gl/iuJk59}) \\
 	& Are Kids Really Motivated by Technology? (\url{http://goo.gl/s3orWi}) \\
 	\midrule
-	\tabtweet
+	\tabcheckin & \textbf{Re-Remembering Rednecks}(: What did I think and what have I learned?) Due Friday, September 4 \\
 \end{tabsched}
 
-\section{Unit 2: Creating an Online Book for All Learners}
+\tabbreak
 
-\subsection{Week of \weekfour}
-
-\begin{specweek}\laborday\end{specweek}
+\specialweek{\laborday}
 
 \begin{tabsched}
+	\tabdt & \weekfour \\
+	\midrule
 	\tabpq & What is the ultimate goal of Universal Design for Learning? \\
 	& What are the different \enquote{modes} according to UDL? \\
 	& What examples of these different modes have you seen in your own educational career? \\
@@ -446,68 +401,72 @@ As a way to engage in constructing digital learning environments and "get your f
 	& UDL At A Glance Video (\url{http://goo.gl/1xhgQh}) \\
 	& UDL Questions \& Answers (\url{http://goo.gl/watsXV}) \\
 	\midrule
-	\tabtweet
-	\midrule
-	\tabtools & Socrative (\url{http://b.socrative.com/login/student/}) \\
-	\midrule
-	\tabperformance & Feedback from Writing Center Completed by Friday, February 13 \\
+	\tabperfomance & \textbf{The Redneck Project} Due Monday, September 14 \\
 \end{tabsched}
-\newpage
-\subsection{Week of \weekfive}
 
-\begin{specweek}\roshhashanah\end{specweek}
+\newpage
+
+\begin{fullwidth}
+	\section{Unit 3: Your Work to Model Social and Emotional Approaches to Teaching and Learning}
+\end{fullwidth}
+
+\gentopic{A key part of the intentional effort involves modeling by educators of introspection,\\contemplative and deliberative practices, and identity work.}
+
+\specialweek{\roshhashanah}
 
 \begin{tabsched}
+	\tabdt & \weekfive \\
+	\midrule
 	\tabpq & According to Carol Dweck, why are the two mindsets\textemdash{}fixed and growth\textemdash{}important? \\
 	& What are times that \emph{you} have taken on a fixed mindset? A growth mindset? \\
 	\midrule
 	\tabread & Mindsets: How to Motivate Students (And Yourself) (\url{http://goo.gl/N997iN}) \\
 	& The Power of Believing You Can Improve (\url{http://goo.gl/ADvfw4}) \\
 	\midrule
-	\tabtools & Storyboard That! (\url{https://www.storyboardthat.com/}) \\
-	& UDL BookBuilder (\url{http://bookbuilder.cast.org}) \\
-	\midrule
-	\tabtweet
-	\midrule
-	\tabperformance & Written Argument Due by Friday, February 20 \\
+	\tabcheckin & \textbf{Practices Organizer} Due Friday, September 18 \\
 \end{tabsched}
 
-\subsection{Week of \weeksix}
+\tabbreak
 
-\begin{specweek}\yomkippur\end{specweek}
+\specialweek{\yomkippur}
 
 \begin{tabsched}
+	\tabdt & \weeksix \\
+	\midrule
 	\tabpq & What are the four Reciprocal Teaching Strategies? \\
 	& What do the Reciprocal Teaching Strategies do for learners? \\
 	\midrule
 	\tabread & Reciprocal Teaching Strategies (\url{http://goo.gl/pIk8XA}) \\
 	\midrule
-	\tabtweet
-	\midrule
-	\tabperformance & UDL Book Outline Intermediate Performance Due by Monday, February 23 \\
-	& UDL Book Storyboard Intermediate Performance Due by Friday, February 27 \\
-
+	\tabperformance & \textbf{Social-Emotional Practices Conference} on Monday, September 28 \\
 \end{tabsched}
 
-\subsection{Week of \weekseven}
+\begin{fullwidth}
+	\section{Unit 4: Social and Emotional Teaching and Learning in the Wide World}
+\end{fullwidth}
+
+\gentopic{Social and emotional learning and teaching occurs within a broader social and political context.}
 
 \begin{tabsched}
+	\tabdt & \weekseven \\
+	\midrule
 	\tabpq & According to the authors, what are the benefits of students becoming digital authors? \\
 	& According to the authors, why is it important for students to use technology in school? \\
 	& What does it mean to write purposefully? \\
 	\midrule
 	\tabread & Creating Digital Authors (\url{http://goo.gl/nTCziC}) \\
-	\midrule
-	\tabtweet
+	\tabcheckin & \textbf{Activity Organizer} Due Friday, October 2 \\
 \end{tabsched}
 
-\section{Unit 3: Exploring the Many Sides of Diversity}
+\tabbreak
 
-\subsection{Week of \weekeight}
+\newpage
 
-\begin{specweek}\acmhe\end{specweek}
+\finisemester
 
 \begin{tabsched}
+	\tabdt & \weekeight \\
+	\midrule
 	\tabpq & What is a WebQuest? \\
 	& What can a student learn from engaging in a WebQuest? \\
 	\midrule
@@ -515,18 +474,12 @@ As a way to engage in constructing digital learning environments and "get your f
 	& What are the Essential Parts of a WebQuest? (\url{http://goo.gl/737kms}) \\
 	& What Kinds of Topics Lend Themselves to WebQuests? (\url{http://goo.gl/ZrD7r4}) \\
 	\midrule
-	\tabtools & See the \textit{Exploring the Many Sides of Diversity} WebQuest (\url{http://goo.gl/sUcRU1}) \\
-	\midrule
-	\tabcheck
-	\midrule
-	\tabperformance & UDL Book Major Performance Due by Friday, March 13 \\
+	\tabperformance & \textbf{Social-Emotional Activity Plan} Due by Monday, October 12 \\
 \end{tabsched}
-
-\begin{specweek}\finisemester\end{specweek}
 
 \newpage
 
-\includepdf[angle=90,width=6in]{course-map.pdf}
+\includepdf[angle=90,width=6in]{sealt.pdf}
 
 \newpage
 
@@ -534,7 +487,7 @@ As a way to engage in constructing digital learning environments and "get your f
 
 \begin{marginfigure}%
 	\begin{center}
-		\includegraphics[width=1\linewidth]{frazz-inspiration.png}
+		\includegraphics[width=1\linewidth]{ap-pic.png}
 	\end{center}
 \end{marginfigure}
 
