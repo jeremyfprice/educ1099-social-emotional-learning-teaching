@@ -5,14 +5,14 @@
 \usepackage{amsmath}
 \usepackage{titlesec}
 \usepackage{framed}
-\usepackage{todonotes}
+%\usepackage{todonotes}
 \usepackage{arydshln}
 \usepackage{fontawesome}
-\usepackage{fontspec}
+%\usepackage{fontspec}
 \usepackage{pdfpages}
 \usepackage{csquotes}
 \MakeOuterQuote{"}
-\setmainfont{Palatino Linotype}
+%\setmainfont{Palatino Linotype}
 
 \titleformat
 {\part} % command
@@ -59,17 +59,20 @@
 
 \usepackage{microtype}
 
-% These commands are used to pretty-print LaTeX commands
-\newcommand{\doccmd}[1]{\texttt{\textbackslash#1}}% command name -- adds backslash automatically
-\newcommand{\docopt}[1]{\ensuremath{\langle}\textrm{\textit{#1}}\ensuremath{\rangle}}% optional command argument
-\newcommand{\docarg}[1]{\textrm{\textit{#1}}}% (required) command argument
-\newenvironment{docspec}{\begin{quote}\noindent}{\end{quote}}% command specification environment
-\newcommand{\docenv}[1]{\textsf{#1}}% environment name
-\newcommand{\docpkg}[1]{\texttt{#1}}% package name
-\newcommand{\doccls}[1]{\texttt{#1}}% document class name
-\newcommand{\docclsopt}[1]{\texttt{#1}}% document class option name
+\usepackage{newpxtext,newpxmath}
+\useosf % old-style figures in text, not in math
 
-\newcommand{\gentopic}[1]{\begin{fullwidth}\begin{center}\faKey~\textsf{#1}\end{center}\end{fullwidth}}
+% These commands are used to pretty-print LaTeX commands
+%\newcommand{\doccmd}[1]{\texttt{\textbackslash#1}}% command name -- adds backslash automatically
+%\newcommand{\docopt}[1]{\ensuremath{\langle}\textrm{\textit{#1}}\ensuremath{\rangle}}% optional command argument
+%\newcommand{\docarg}[1]{\textrm{\textit{#1}}}% (required) command argument
+%\newenvironment{docspec}{\begin{quote}\noindent}{\end{quote}}% command specification environment
+%\newcommand{\docenv}[1]{\textsf{#1}}% environment name
+%\newcommand{\docpkg}[1]{\texttt{#1}}% package name
+%\newcommand{\doccls}[1]{\texttt{#1}}% document class name
+%\newcommand{\docclsopt}[1]{\texttt{#1}}% document class option name
+
+\newcommand{\gentopic}[1]{\begin{fullwidth}\begin{center}\faKey \textsf{#1}\end{center}\end{fullwidth}}
 \newcommand{\tabpq}{\faQuestionSign\medspace\textit{Priming Questions}}
 \newcommand{\tabread}{\faBook\medspace\textit{Readings}}
 \newcommand{\tabperformance}{\faTasks\medspace\textit{Performances}}
@@ -102,7 +105,11 @@
 \newcommand{\laborday}{Labor Day on Monday, September 7 (no class)}
 \newcommand{\roshhashanah}{Rosh Hashanah on Monday, September 14 (class via VoiceThread)}
 \newcommand{\yomkippur}{Yom Kippur on Wednesday, September 23 (class via VoiceThread)}
-\newcommand{\finisemester}{\begin{fullwidth}\begin{center}\large\textbf{\faFlagCheckered~Last Day of Class, Wednesday, October 7~\faFlagCheckered}\normalsize\end{center}\end{fullwidth}}
+\newcommand{\finisemester}{\begin{fullwidth}\begin{center}\large\textbf{\faFlagCheckered Last Day of Class, Wednesday, October 7 \faFlagCheckered}\normalsize\end{center}\end{fullwidth}}
+
+% Set up the spacing using fontspec features
+\renewcommand\allcapsspacing[1]{{\addfontfeature{LetterSpace=15}#1}}
+\renewcommand\smallcapsspacing[1]{{\addfontfeature{LetterSpace=10}#1}}
 
 \begin{document}
 
@@ -111,53 +118,29 @@
 \begin{abstract}
 Welcome to EDUC1099, Social and Emotional Approaches to Learning and Teaching. Blah blah blah blah.\end{abstract}
 
-%\addvspace{1.5in}
 \bigskip
 
-\begin{fullwidth}
+%\begin{fullwidth}
 	\begin{center}
 		\includegraphics[width=0.40\linewidth]{sealt-logo.jpg}
-
-		\includegraphics[width=0.40\linewidth]{life-hard.png}
 
 		\bigskip
 
 		\Large
-		\enquote{It seems to me that that, finally, is what good teaching is all about\ldots~~Somehow or another, skill and knowledge are integrated into some kind of a human connection.}~-~Mike Rose
+		\enquote{It seems to me that that, finally, is what good teaching is all about\ldots Somehow or another, skill and knowledge are integrated into some kind of a human connection.}\\- Mike Rose
 		\normalsize
 	\end{center}
-\end{fullwidth}
+%\end{fullwidth}
 
-\vfill
+\input{syllabus-files/professor-info}
 
-\subsection{Get to Know Your Professor}
-
-\noindent Dr. Jeremy Price
-
-\noindent Office: Education 315 | 304.333.3686
-
-\noindent \marginnote{\textit{Psst: Email is the best way to contact me.}}Email: \href{mailto:jeremy.price@fairmontstate.edu}{\nolinkurl{jeremy.price@fairmontstate.edu}}
-
-\noindent Visit me during my student drop-in hours:
-\marginnote{If you can't make my student drop-in hours, schedule an appointment with me at \url{https://jeremyprice.youcanbook.me/}}
-\begin{table}[ht]
-  \centering
-  %\fontfamily{ppl}\selectfont
-  \begin{tabular}{ccc}
-    \toprule
-    Mondays & Wednesdays & Fridays \\
-    \midrule
-    10:00am - 12:00pm & 10:00am - 12:00pm & 10:00am - 12:00pm \\
- 	& & 1:00pm - 2:00pm \\
-    \bottomrule
-  \end{tabular}
-\end{table}
 \newpage
 
 \part{The EDUC1099 Contract}
+
 \begin{fullwidth}
 
-\input{syllabus-files/undergraduate-course_contract.tex}
+\input{syllabus-files/undergraduate-course_contract}
 
 \end{fullwidth}
 \newpage
@@ -179,11 +162,11 @@ Welcome to EDUC1099, Social and Emotional Approaches to Learning and Teaching. B
 \begin{center}
 	\large$\downarrow$\hspace{0.5em}\textit{By engaging in these experiences\ldots}\hspace{0.5em}$\downarrow$
 \end{center}
-\begin{framed}
-	\begin{center}
-		\includegraphics[width=0.45\linewidth]{experiences.png}
-	\end{center}
-\end{framed}
+%\begin{framed}
+%	\begin{center}
+%		\includegraphics[width=0.45\linewidth]{experiences.png}
+%	\end{center}
+%\end{framed}
 \begin{center}
 	\large$\downarrow$\hspace{0.5em}\textit{To help you become\ldots}\hspace{0.5em}$\downarrow$
 \end{center}
@@ -224,7 +207,7 @@ You might forget me to send me an email, so \textbf{each teacher candidate in ED
 
 \section{Stay Current by Keeping In Touch Outside of Class}
 
-\newthought{Communications between me and you outside of class will occur over \underline{email}.} \marginnote{If you wish to be notified by text every time I send an email to the class, please send a text to 81010. If you are in the 9:00am class, send the message \texttt{@edu2201-9}. If you are in the 12:00pm class, send the message \texttt{@edu2201-12}.}Please do not send me a message through Blackboard. Please make sure to check your Fairmont State email on a regular basis (at least 4-5 times per week). If you do not have a smart phone, a computer or internet access at home or in your dorm room, make it a regular practice to go to the library and check your email there.
+\newthought{Communications between me and you outside of class will occur over email.} Please do not send me a message through Blackboard. Please make sure to check your Fairmont State email on a regular basis (at least 4-5 times per week). If you do not have a smart phone, a computer or internet access at home or in your dorm room, make it a regular practice to go to the library and check your email there.
 
 \section{Learn More by Submitting Assignments and Making Good Use of Feedback}
 \newthought{It is important to submit assignments on time} as a professional courtesy to yourself, your professor, and your classmates. All assignments are due in TaskStream before \textit{Pumpkin Hour}\footnote{\textit{Pumpkin Hour} is 11:59pm on the day the assignment is due.}. It is best not to wait until the Very Last Minute to submit assignments on \texttt{TaskStream}, as the submission process requires several steps.
@@ -247,31 +230,31 @@ I completely understand that life happens and emergencies, illnesses, and other 
 
 In this unit, we will be exploring a framework for social and emotional approaches to teaching and learning. We will see how this framework intersects with the real lives of teachers and learners and the work in which they engage together. As a way to help you make these connections, you will be keeping a two-day journal in which you document when aspects of this framework intersect with your own experiences as a learner. You will then write a comprehensive, analytical, and rigorous reflection on what happened, how these experiences intersected with the framework, and how you now see things differently.
 
-\medskip\noindent\textit{$\mapsto$~Your 48-Hour Social-Emotional Journal is worth \textbf{20 points}.}
+\medskip\noindent\textit{$\mapsto$ Your 48-Hour Social-Emotional Journal is worth \textbf{20 points}.}
 
 \section{Unit 2: The Impact of Stories on Teaching and Learning}
 
 When examining the social and emotional aspects of teaching and learning, it is important to recognize the stories we tell about ourselves, the stories we construct around others, and the stories that others tell about us. The story of the "redneck" is one that is intertwined with the cultural history of Appalachia, and is mostly not flattering. We will learn about the history of this phrase, learn about its significance, and work to "re-write" its meaning through creative artifacts. This re-writing is important to help students who may live out the stories written for them instead write the stories and live the lives they prefer.
 
-\medskip\noindent\textit{$\mapsto$~Your Redneck Project is worth \textbf{20 points}.}
+\medskip\noindent\textit{$\mapsto$ Your Redneck Project is worth \textbf{20 points}.}
 
 \section{Unit 3: Your Work to Model Social and Emotional Approaches to Teaching and Learning}
 
 Modeling is one of the most powerful tools for teaching. It is therefore important to model social and emotional practices in your own teaching and learning lives as an educator. Each person in the class will select a social-emotional practice and conduct research into what it is, what purpose it serves, how it works, and what the potential outcomes are. You will create a short poster presentation for a Social-Emotional Practices Conference. You will be able to engage classmates in conversation about these practices.
 
-\medskip\noindent\textit{$\mapsto$~Your presentation in the Social-Emotional Practices Conference is worth \textbf{20 points}.}
+\medskip\noindent\textit{$\mapsto$ Your presentation in the Social-Emotional Practices Conference is worth \textbf{20 points}.}
 
 \subsection{Unit 4: Social and Emotional Teaching and Learning in the Wide World}
 
 One of the most important jobs of an educator is to facilitate an environment to promote learning, and planning this environment is a necessary part of this process. As such, as your last performance, you will be planning an activity that incorporates principles and practices of social-emotional learning and teaching. This plan is a condensed version of the lesson plan format you will be expected to write later in your career as a teacher education candidate. I hope that you will continue
 
-\medskip\noindent\textit{$\mapsto$~Your Social-Emotional Activity Plan is worth \textbf{20 points}.}
+\medskip\noindent\textit{$\mapsto$ Your Social-Emotional Activity Plan is worth \textbf{20 points}.}
 
 \section{Cross-Unit Considerations}
 
 Blah
 
-\medskip\noindent\textit{$\mapsto$~These combined considerations are worth \textbf{20 points}.}
+\medskip\noindent\textit{$\mapsto$ These combined considerations are worth \textbf{20 points}.}
 
 \section{Course Point Breakdown}
 
@@ -328,9 +311,9 @@ Blah
 	\bottomrule
 \end{tabular}
 
-\begin{fullwidth}
+%\begin{fullwidth}
 	\section{Unit 1: Introducing Social and Emotional Approaches to Teaching and Learning}
-\end{fullwidth}
+%\end{fullwidth}
 
 \gentopic{Values and attitudes influence the educational process, are brought in by both students and educators,\\and can be developed through intentional efforts.}
 
@@ -362,9 +345,9 @@ Blah
 	\tabperformance & \textbf{48-Hour Social-Emotional Journal} Due Monday, August 31 \\
 \end{tabsched}
 
-\begin{fullwidth}
+%\begin{fullwidth}
 	\section{Unit 2: The Impact of Stories on Teaching and Learning}
-\end{fullwidth}
+%\end{fullwidth}
 
 \gentopic{The stories that we tell about ourselves and others influence the attitudes and values that we bring\\to our lives and learning experiences.}
 
