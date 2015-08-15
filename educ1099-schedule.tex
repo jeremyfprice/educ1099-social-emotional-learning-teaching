@@ -1,0 +1,122 @@
+%!TEX program = luatex
+
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontawesome}
+\usepackage{fontspec}
+\setmainfont{Palatino Linotype}
+\setsansfont{Gill Sans MT}
+\setmonofont{Deja Vu Sans Mono}
+% The following package makes prettier tables.  We're all about the bling!
+\usepackage{booktabs}
+
+\newcommand{\gentopic}[1]{\begin{center}\faKey\hspace{1em}\textsf{#1}\end{center}}
+\newcommand{\tabread}{\faBook\hspace{1em}\textit{Readings}}
+\newcommand{\tabperformance}{\faTasks\medspace\textit{Performances}}
+\newcommand{\tabdt}{\faCalendar\hspace{1em}\textit{Week Of}}
+\newcommand{\tabcheckin}{\faCheckSquareO\hspace{1em}\textit{Check-In Performances}}
+\newcommand{\tabbreak}{\begin{center}\faAsterisk\faAsterisk\faAsterisk\\\end{center}}
+\newcommand{\specialweek}[1]{\begin{center}\textbf{\faBullhorn\hspace{1em} Special Week: #1 \hspace{1em}\faBullhorn}\end{center}}
+\newenvironment{tabsched}
+	{\small
+	\begin{tabular}{p{1.5in}p{4.5in}}
+	\midrule}
+	{\midrule
+	\end{tabular}
+	\normalsize}
+
+\newenvironment{specweek}
+	{\begin{center}
+		\fontseries{b} \faBullhorn \medspace Special Week: }
+		{\medspace \faBullhorn \fontseries{m}
+	\end{center}}
+
+\newcommand{\weekone}{August 17-21}
+\newcommand{\weektwo}{August 24-28}
+\newcommand{\weekthree}{August 31-September 4}
+\newcommand{\weekfour}{September 7-11}
+\newcommand{\weekfive}{September 14-18}
+\newcommand{\weeksix}{September 21-25}
+\newcommand{\weekseven}{September 28-October 2}
+\newcommand{\weekeight}{October 5-9}
+\newcommand{\laborday}{Labor Day on Monday, September 7 (no class)}
+\newcommand{\roshhashanah}{Rosh Hashanah on Monday, September 14 (class via VoiceThread)}
+\newcommand{\yomkippur}{Yom Kippur on Wednesday, September 23 (class via VoiceThread)}
+\newcommand{\finisemester}{\begin{center}\large\textbf{\faFlagCheckered Last Day of Class, Wednesday, October 7 \faFlagCheckered}\normalsize\end{center}}
+\newcommand{\url}[1]{\footnotesize\texttt{#1}\normalsize}
+\newcommand{\listmon}{\item[\large\textsf{Monday}\normalsize] \hfill \\}
+\newcommand{\listwed}{\item[\large\textsf{Wednesday}\normalsize] \hfill \\}
+\newenvironment{daywu}
+	{\underline{\textbf{Warm-Up:}} \hfill \\
+	\begin{itemize}}
+	{\end{itemize}}
+\newenvironment{dayact}
+	{\underline{\textbf{Activities:}} \hfill \\
+	\begin{itemize}}
+	{\end{itemize}}
+\newenvironment{dayref}
+	{\underline{\textbf{Reflection:}} \hfill \\
+	\begin{itemize}}
+	{\end{itemize}}
+\newenvironment{weeksched}
+	{\noindent
+	\begin{description}}
+	{\end{description}
+	\newpage}
+
+\begin{document}
+\section{Introducing Social and Emotional Approaches to Teaching and Learning}
+
+\gentopic{Values and attitudes influence the educational process, are brought in by both students and educators,\\and can be developed through intentional efforts.}
+
+
+\begin{tabsched}
+	\tabdt & \weekone \\
+	\midrule
+	\tabread & The Need for Social and Emotional Learning (\url{http://bit.ly/1WauXyA}) \\
+	& Why Emotional Learning May Be As Important As The ABCs \\
+	& (\url{http://n.pr/1OZuvO1}) \\
+	& How to Be Emotionally Intelligent (\url{\texttt{http://nyti.ms/1hrH6it}}) \\
+	& Nonacademic Skills are Key To Success. But What Should We Call Them?  (\url{http://n.pr/1PeOtFh}) \\
+	\midrule
+	\tabcheckin & \textbf{What Do I Notice?} Due Friday, August 21 \\
+\end{tabsched}
+\begin{weeksched}
+
+\listmon
+\begin{daywu}
+	\item Purposeful First Day Exercise
+		\begin{itemize}
+			\item Name on one side
+			\item What kind of educator/person do you want to be?
+			\item What kind of impact do you want to have?
+		\end{itemize}
+	\item Pair-Share, and then share with class. Additional question: How do you want this class to help you with these answers?
+\end{daywu}
+\begin{dayact}
+	\item Discuss brief overview of class and review syllabus
+	\item Read poem, discuss in hevrutah
+	\begin{itemize}
+		\item Why is "ideal" important?
+		\item How does this poem relate to learning?
+		\item How does this poem relate to knowing?
+	\end{itemize}
+\end{dayact}
+\begin{dayref}
+	\item What's one thing you've found surprising today in class?
+\end{dayref}
+
+\listwed
+\begin{daywu}
+	\item Second-Day Graffiti
+\end{daywu}
+\begin{dayact}
+	\item Pause for questions about the course, requirements, or due dates
+	\item "Lecture" on Framework
+\end{dayact}
+\begin{dayref}
+	\item Anonymous remaining questions on note cards
+\end{dayref}
+\end{weeksched}
+\tabbreak
+\end{document}

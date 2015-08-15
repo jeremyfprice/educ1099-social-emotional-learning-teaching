@@ -1,0 +1,297 @@
+%!TEX program = luatex
+
+%\documentclass[two-side]{tufte-handout}
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{titlesec}
+%\usepackage{framed}
+\usepackage{arydshln}
+\usepackage{fontawesome}
+%\usepackage{pdfpages}
+\usepackage{csquotes}
+\MakeOuterQuote{"}
+
+\titleformat
+{\part} % command
+[display] % shape
+{\bfseries\Large\itshape} % format
+{Story No. \ \thechapter} % label
+{0.5ex} % sep
+{
+    \rule{\textwidth}{1pt}
+    \vspace{1ex}
+    \centering
+} % before-code
+[
+\vspace{-0.5ex}%
+\rule{\textwidth}{0.3pt}
+] % after-code
+
+% Set up the images/graphics package
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+\graphicspath{{syllabus-img/}}
+
+\title{Social and Emotional Approaches to Learning and Teaching}
+\author{Dr. Jeremy Price}
+\date{Fall 2015}  % if the \date{} command is left out, the current date will be used
+
+% The following package makes prettier tables.  We're all about the bling!
+\usepackage{booktabs}
+
+% The units package provides nice, non-stacked fractions and better spacing
+% for units.
+\usepackage{units}
+
+% The fancyvrb package lets us customize the formatting of verbatim
+% environments.  We use a slightly smaller font.
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+
+% Small sections of multiple columns
+\usepackage{multicol}
+
+% Provides paragraphs of dummy text
+\usepackage{lipsum}
+
+\usepackage{microtype}
+
+\usepackage{newpxtext,newpxmath}
+\useosf % old-style figures in text, not in math
+
+\newcommand{\gentopic}[1]{\begin{center}\faKey \textsf{#1}\end{center}}
+\newcommand{\tabpq}{\faQuestionCircle\medspace\textit{Priming Questions}}
+\newcommand{\tabread}{\faBook\medspace\textit{Readings}}
+\newcommand{\tabperformance}{\faTasks\medspace\textit{Performances}}
+\newcommand{\tabdt}{\faCalendar\medspace\textit{Week Of}}
+\newcommand{\tabcheckin}{\faCheckSquareO\medspace\textit{Check-In Performances}}
+\newcommand{\tabbreak}{\begin{center}\faAsterisk\faAsterisk\faAsterisk\\\end{center}}
+\newcommand{\specialweek}[1]{\begin{center}\textbf{\faBullhorn\medspace Special Week: #1 \medspace\faBullhorn}\end{center}}
+\newenvironment{tabsched}
+	{\small
+	\begin{tabular}{p{1.5in}p{4.5in}}
+	\midrule}
+	{\midrule
+	\end{tabular}
+	\normalsize}
+
+\newenvironment{specweek}
+	{\begin{center}
+		\fontseries{b} \faBullhorn \medspace Special Week: }
+		{\medspace \faBullhorn \fontseries{m}
+	\end{center}}
+
+\newcommand{\weekone}{August 17-21}
+\newcommand{\weektwo}{August 24-28}
+\newcommand{\weekthree}{August 31-September 4}
+\newcommand{\weekfour}{September 7-11}
+\newcommand{\weekfive}{September 14-18}
+\newcommand{\weeksix}{September 21-25}
+\newcommand{\weekseven}{September 28-October 2}
+\newcommand{\weekeight}{October 5-9}
+\newcommand{\laborday}{Labor Day on Monday, September 7 (no class)}
+\newcommand{\roshhashanah}{Rosh Hashanah on Monday, September 14 (class via VoiceThread)}
+\newcommand{\yomkippur}{Yom Kippur on Wednesday, September 23 (class via VoiceThread)}
+\newcommand{\finisemester}{\begin{center}\large\textbf{\faFlagCheckered Last Day of Class, Wednesday, October 7 \faFlagCheckered}\normalsize\end{center}}
+
+\newcommand{\listmon}{\item[Monday] \hfill \\}
+\newcommand{\listwed}{\item[Wednesday] \hfill \\}
+\newenvironment{daywu}
+	{\textbf{\underline{Warm-Up:}} \hfill \\
+	\begin{itemize}}
+	{\end{itemize}}
+\newenvironment{dayact}
+	{\textbf{\underline{Activities:}} \hfill \\
+	\begin{itemize}}
+	{\end{itemize}}
+\newenvironment{dayref}
+	{\textbf{\underline{Reflection:}} \hfill \\
+	\begin{itemize}}
+	{\end{itemize}}
+\newenvironment{weeksched}
+	{\noindent
+	\begin{description}}
+	{\end{description}
+	\newpage}
+
+% Set up the spacing using fontspec features
+%\renewcommand\allcapsspacing[1]{{\addfontfeature{LetterSpace=15}#1}}
+%\renewcommand\smallcapsspacing[1]{{\addfontfeature{LetterSpace=10}#1}}
+\setmainfont{Alice in Wonderland}
+\setsansfont{Gill Sans MT}
+
+\begin{document}
+\section{Unit 1: Introducing Social and Emotional Approaches to Teaching and Learning}
+
+\gentopic{Values and attitudes influence the educational process, are brought in by both students and educators,\\and can be developed through intentional efforts.}
+
+
+\begin{tabsched}
+	\tabdt & \weekone \\
+	\midrule
+	\tabread & The Need for Social and Emotional Learning (\url{http://bit.ly/1WauXyA}) \\
+	& Why Emotional Learning May Be As Important As The ABCs \\
+	& (\url{http://n.pr/1OZuvO1}) \\
+	& How to Be Emotionally Intelligent (\url{http://nyti.ms/1hrH6it}) \\
+	& Nonacademic Skills are Key To Success. But What Should We Call Them?  (\url{http://n.pr/1PeOtFh}) \\
+	\midrule
+	\tabcheckin & \textbf{What Do I Notice?} Due Friday, August 21 \\
+\end{tabsched}
+\begin{weeksched}
+
+\listmon
+\begin{daywu}
+	\item Purposeful First Day Exercise
+		\begin{itemize}
+			\item Name on one side
+			\item What kind of educator/person do you want to be?
+			\item What kind of impact do you want to have?
+		\end{itemize}
+	\item Pair-Share, and then share with class. Additional question: How do you want this class to help you with these answers?
+\end{daywu}
+\begin{dayact}
+	\item Discuss brief overview of class and review syllabus
+	\item Read poem, discuss in hevrutah
+	\begin{itemize}
+		\item Why is "ideal" important?
+		\item How does this poem relate to learning?
+		\item How does this poem relate to knowing?
+	\end{itemize}
+\end{dayact}
+\begin{dayref}
+	\item What's one thing you've found surprising today in class?
+\end{dayref}
+
+\listwed
+\begin{daywu}
+	\item Second-Day Graffiti
+\end{daywu}
+\begin{dayact}
+	\item Pause for questions about the course, requirements, or due dates
+	\item "Lecture" on Framework
+\end{dayact}
+\begin{dayref}
+	\item Anonymous remaining questions on note cards
+\end{dayref}
+\textsf{Test test test}
+
+\end{weeksched}
+\tabbreak
+
+\begin{tabsched}
+	\tabdt & \weektwo \\
+	\midrule
+	\tabread & How Emotions Affect Learning (\url{http://bit.ly/1TivmL9})\\
+	& The Science of Inside Out (\url{http://nyti.ms/1TivSsn})\\
+	& Four Lessons from Inside Out to Discuss With Kids (\url{http://bit.ly/1KY4ONg})\\
+	\midrule
+	\tabperformance & \textbf{48-Hour Social-Emotional Journal} Due Monday, August 31 \\
+\end{tabsched}
+
+	\section{Unit 2: The Impact of Stories on Teaching and Learning}
+
+\gentopic{The stories that we tell about ourselves and others influence the attitudes and values that we bring\\to our lives and learning experiences.}
+
+\begin{tabsched}
+	\tabdt & \weekthree \\
+	\midrule
+	\tabread & Between the World and Me (\url{http://theatln.tc/1J4PS2b}) \\
+	& Rachel Dolezal, in Center of Storm, Is Defiant: 'I Identify as Black' \\
+	& (\url{http://nyti.ms/1DAKIZQ}) \\
+	& Inside Appalachia: WV Mine Wars, Red-Neck Folklore, \& More \\
+	& (\url{http://bit.ly/1DAKOAI} up until the 20 minute mark, \\
+	& although you are welcome to listen to the whole episode) \\
+	\midrule
+	\tabcheckin & \textbf{Re-Remembering Rednecks} Due Friday, September 4 \\ % (: What did I think and what have I learned?)
+\end{tabsched}
+
+\tabbreak
+
+\specialweek{\laborday}
+
+\begin{tabsched}
+	\tabdt & \weekfour \\
+	\midrule
+	\tabread & Politics in the Classroom: How Much is Too Much? (\url{http://n.pr/1J4QaGw}) \\
+	& How Mindfulness Can Defeat Racial Bias (\url{http://bit.ly/1UxGjL6}) \\
+	& Teaching While White (\url{http://bit.ly/1IwsgAe})\\
+	\midrule
+	\tabperformance & \textbf{The Redneck Project} Due Monday, September 14 \\
+\end{tabsched}
+
+	\section{Unit 3: Your Work to Model Social and Emotional Approaches to Teaching and Learning}
+
+\gentopic{A key part of the intentional effort involves modeling by educators of introspection,\\contemplative and deliberative practices, and identity work.}
+
+\specialweek{\roshhashanah}
+
+\begin{tabsched}
+	\tabdt & \weekfive \\
+	\midrule
+	\tabread & Juvenile Injustice (\url{http://slate.me/1L13xVJ}) \\
+	& In Classroom Discipline, a Soft Approach Is Harder Than It Looks \\
+	& (\url{http://bit.ly/1IFXZg9}) \\
+	& Fresh Starts for Hard to Like Students (\url{http://bit.ly/1N1GkVC}) \\
+	& 'You are more than your mistakes': Teachers get at roots of bad behavior (\url{http://bit.ly/1Wayi0t}) \\
+	& Sometimes Misbehavior Is Not What It Seems (\url{http://bit.ly/1PeON75}) \\
+	\midrule
+	\tabcheckin & \textbf{Practices Organizer} Due Friday, September 18 \\
+\end{tabsched}
+
+\tabbreak
+
+\newpage
+
+\specialweek{\yomkippur}
+
+\begin{tabsched}
+	\tabdt & \weeksix \\
+	\midrule
+	\tabread & How SEL and Mindfulness Can Work Together (\url{http://bit.ly/1DMIGFM}) \\
+	& Shared Mindfulness: Building Supportive Relationships in the Classroom (\url{http://bit.ly/1f2n3Wc}) \\
+	& Energy and Calm: Brain Breaks and Focused-Attention Practices \\
+	& (\url{http://bit.ly/1NklTRE}) \\
+	& 3 Steps to Increase Students' Self-Awareness: Identifying Strengths and Challenges (\url{http://bit.ly/1J4QXqR}) \\
+	\midrule
+	\tabperformance & \textbf{Contemplative Practices Tree} Due on Friday, September 25 \\
+	& \textbf{Contemplative Practices Discussion Day} on Monday, September 28 \\
+\end{tabsched}
+
+	\section{Unit 4: Social and Emotional Teaching and Learning in the Wide World}
+
+\gentopic{Social and emotional learning and teaching occurs within a broader social and political context.}
+
+\begin{tabsched}
+	\tabdt & \weekseven \\
+	\midrule
+	\tabread & Five Ways Teachers Can Limit the Fear of Creative Failure \\
+	& (\url{http://bit.ly/1N1ST3k}) \\
+	& Do we have the confidence to allow students to be playful learners? \\
+	& (\url{http://bit.ly/1IXY5mT}) \\
+	& Oopsigami (\url{http://bit.ly/1MeFggd}) \\
+	& Using Origami to Foster a Growth Mindset (\url{http://bit.ly/1f2p44E}) \\
+	\midrule
+	\tabcheckin & \textbf{Activity Organizer} Due Friday, October 2 \\
+\end{tabsched}
+
+\tabbreak
+
+\finisemester
+
+\begin{tabsched}
+	\tabdt & \weekeight \\
+	\midrule
+	\tabread & How to Integrate Social-Emotional Learning into Common Core \\
+	& (\url{http://bit.ly/1IY0jTg}) \\
+	& Low-Income Schools See Big Benefits in Teaching Mindfulness \\
+	& (\url{http://bit.ly/1DAWyDd}) \\
+	& The Language of Choice and Support (\url{http://bit.ly/1hskU8a}) \\
+	& Believing in Students: The Power to Make a Difference (\url{http://bit.ly/1IwxgEZ}) \\
+	\midrule
+	\tabperformance & \textbf{Social-Emotional Activity Plan} Due by Monday, October 12 \\
+\end{tabsched}
+
+\end{document}
