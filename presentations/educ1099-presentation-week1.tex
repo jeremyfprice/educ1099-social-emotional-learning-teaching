@@ -1,0 +1,354 @@
+%!TEX program = lualatex
+
+\documentclass[aspectratio=169]{beamer}
+%\documentclass[12pt,t]{beamer}
+\beamertemplatenavigationsymbolsempty
+\usetheme{default}
+\usepackage{graphicx}
+\graphicspath{{presentation1-img/}}
+\setbeameroption{hide notes}
+\setbeamertemplate{note page}[plain]
+
+\usefonttheme{professionalfonts} % using non standard fonts for beamer
+\usefonttheme{serif} % default family is serif
+\usepackage{fontspec}
+\setmainfont{Crimson Text}
+\setsansfont{Gill Sans MT}
+\setmonofont{Deja Vu Sans Mono}
+
+\usepackage{color}
+
+\usepackage{booktabs}
+\usepackage{array,multirow}
+
+\usepackage{csquotes}
+\MakeOuterQuote{"}
+
+
+\usepackage{tikz}
+\usetikzlibrary{shadows,calc}
+
+% code adapted from http://tex.stackexchange.com/a/11483/3954
+
+% some parameters for customization
+\def\shadowshift{3pt,-3pt}
+\def\shadowradius{6pt}
+\colorlet{innercolor}{black!60}
+\colorlet{outercolor}{gray!05}
+
+% this draws a shadow under a rectangle node
+\newcommand\drawshadow[1]{
+	\begin{pgfonlayer}{shadow}
+		\shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.south west)+(\shadowshift)+(\shadowradius/2,\shadowradius/2)$) circle (\shadowradius);
+		\shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) circle (\shadowradius);
+		\shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) circle (\shadowradius);
+		\shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.north east)+(\shadowshift)+(-\shadowradius/2,-\shadowradius/2)$) circle (\shadowradius);
+		\shade[top color=innercolor,bottom color=outercolor] ($(#1.south west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) rectangle ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$);
+		\shade[left color=innercolor,right color=outercolor] ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$);
+		\shade[bottom color=innercolor,top color=outercolor] ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$);
+		\shade[outercolor,right color=innercolor,left color=outercolor] ($(#1.south west)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$);
+		\filldraw ($(#1.south west)+(\shadowshift)+(\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)-(\shadowradius/2,\shadowradius/2)$);
+	\end{pgfonlayer} }
+% create a shadow layer, so that we don't need to worry about overdrawing other things
+\pgfdeclarelayer{shadow}
+\pgfsetlayers{shadow,main}
+\newsavebox\mybox
+\newlength\mylen
+\newcommand\shadowimage[2][]{%
+	\setbox0=\hbox{\includegraphics[#1]{#2}}
+	\setlength\mylen{\wd0}
+	\ifnum\mylen<\ht0
+		\setlength\mylen{\ht0}
+	\fi
+	\divide \mylen by 120
+	\def\shadowshift{\mylen,-\mylen}
+	\def\shadowradius{\the\dimexpr\mylen+\mylen+\mylen\relax}
+	\begin{tikzpicture}
+		\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[#1]{#2}};
+		\drawshadow{image}
+	\end{tikzpicture}}
+
+\definecolor{bgcolor}{RGB}{255,255,243}
+\definecolor{FSUred}{RGB}{134,0,56}
+\definecolor{fgblack}{RGB}{0,0,0} % I can't seem to figure out a way around this...
+
+\setbeamercolor{background canvas}{bg=bgcolor}
+\setbeamercolor{titlelike}{fg=fgblack}
+\setbeamercolor{subtitle}{fg=fgblack}
+\setbeamercolor{frametitle}{fg=FSUred}
+\setbeamercolor{subtitle}{fg=FSUred}
+
+\author{EDUC1199}
+\date{19 August 2015}
+\title{\Huge\textsf{A FRAMEWORK}\normalsize}
+\subtitle{For Social and Emotional Approaches to Teaching and Learning}
+
+\newcommand{\tBold}[1]{\textcolor{FSUred}{\textbf{#1}}}
+
+\begin{document}
+	\begin{frame}
+
+		\vfill
+
+		\maketitle
+
+		\vfill
+
+	\end{frame}
+
+	\begin{frame}%
+		\begin{columns}[c] % align columns
+			\begin{column}{.48\textwidth}
+				\Large "The virtues of men are of more consequence to society than their abilities; and for this reason, the heart should be cultivated with more assiduity than the head." \normalsize
+				\vspace{2em}
+				\begin{flushright}
+					\tiny- Noah Webster, 1788
+				\end{flushright}
+			\end{column}%
+			\hfill%
+			\begin{column}{.48\textwidth}
+				\centering\noindent\shadowimage[width=0.5\textwidth]{noah_webster-bw.jpg}
+			\end{column}%
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}%
+		\begin{columns}[c] % align columns
+			\begin{column}{.48\textwidth}
+				\centering\noindent\shadowimage[width=0.9\textwidth]{puzzle-bw.png}
+			\end{column}%
+			\hfill%
+			\begin{column}{.48\textwidth}
+				\Large "{\ldots}[E]xperience and research show that promoting social and emotional development in children is ‘the missing piece’ in efforts to reach the array of goals associated with improving schooling in the United States."\normalsize
+				\vspace{2em}
+				\begin{flushright}
+					\tiny(Elias et al., 1997)\normalsize
+				\end{flushright}
+			\end{column}%
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}%
+		\begin{columns}[c] % align columns
+			\begin{column}{.48\textwidth}
+				\Large "{\ldots}[T]he least successful substance abuse prevention programs are those that provide students information about the dangers of illicit drug use without helping them understand the social and emotional dimensions of peer pressure, stress, coping, honesty, and consequential thinking." \normalsize
+				\vspace{2em}
+				\begin{flushright}
+					\tiny(Elias et al., 1997)\normalsize
+				\end{flushright}
+			\end{column}%
+			\hfill%
+			\begin{column}{.48\textwidth}
+				\centering\noindent\shadowimage[width=0.9\textwidth]{llama-bw.png}
+			\end{column}%
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{\textsf{We carry our emotions with us\ldots}}
+		\vfill
+		\centering\noindent\shadowimage[width=0.85\textwidth]{lego_faces.png}
+		\vfill
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{\textsf{{\ldots}And emotions influence teaching and learning.}}
+		\vfill
+		\centering\noindent\shadowimage[width=0.70\textwidth]{hallway.png}
+		\vfill
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{\textsf{School is a place to practice, learn, and grow.}}
+		\vfill
+		\centering\noindent\shadowimage[width=0.70\textwidth]{grow-bw.png}
+		\vfill
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{\textsf{We want learners to practice, learn, and grow socially and emotionally.}}
+		%\vfill
+		\centering\noindent\shadowimage[width=0.70\textwidth]{pencils-bw.png}
+		%\vfill
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{\textsf{A Convergence of Many Branches}}
+		\footnotesize\begin{tabular}{lll}
+			\toprule
+			\multirow{9}{*}{\parbox[l]{5cm}{\flushleft\huge The Social-Emotional Family Tree \footnotesize}} & \multirow{4}{*}{\parbox[l]{3cm}{\flushleft\normalsize School Reform Movements \footnotesize}} & 21st Century Skills \\
+			 & & Character \\
+			 & & Social and Emotional Skills \\
+			 & & Soft Skills \\
+			\cline{2-3}
+			 & \multirow{3}{*}{\parbox[l]{3cm}{\flushleft\normalsize Cognitive and Social Psychology \footnotesize}} & Grit \\
+			 & & Growth Mindset \\
+			 & & Noncognitive Traits and Habits \\
+			 \cline{2-3}
+			 & \multirow{2}{*}{\flushleft\normalsize Other Traditions \footnotesize} & Mindfulness \\
+			 & & Restorative Justice \\
+			 \bottomrule
+		\end{tabular}
+	\end{frame}
+
+	\begin{frame}
+		\vspace{10em}
+		\Huge "It's a different way of being smart." \normalsize
+		\vspace{1em}
+		\begin{flushright}
+			(Goleman, 1995)
+		\end{flushright}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{\textsf{Focusing on a Framework}}
+		\centering\noindent\shadowimage[width=0.50\textwidth]{frame.png}
+	\end{frame}
+
+	\begin{frame}%
+		\frametitle{\textsf{Frameworks as Working Through Complexity}}
+		\begin{columns}[c] % align columns
+			\begin{column}{.48\textwidth}
+				\Large FRAMEWORKS HELP US pay attention to \tBold{specific details} and make sense of these details within the \tBold{context of the whole}. They give us \tBold{boundaries} for our work when reality is complicated, and help us to \tBold{make connections} between different parts.\normalsize
+			\end{column}%
+			\hfill%
+			\begin{column}{.48\textwidth}
+				\centering\noindent\shadowimage[width=0.9\textwidth]{viewpoint-bw.png}
+			\end{column}%
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{\textsf{Our Focusing Framework}}
+		\footnotesize\begin{tabular}{ccl}
+			\toprule
+			\multirow{9}{*}{\parbox[l]{5cm}{\flushleft\huge New Haven Social Development Curriculum \footnotesize}} & \multirow{3}{*}{\normalsize Skills \footnotesize} & Self-Management \\
+			 & & Problem Solving and Decision Making \\
+			 & & Communication \\
+			\cline{2-3}
+			 & \multirow{3}{*}{\normalsize Attitudes and Values \footnotesize} & About Self \\
+			 & & About Others \\
+			 & & About Tasks \\
+			 \cline{2-3}
+			 & \multirow{3}{*}{\normalsize Content \footnotesize} & Self/Health \\
+			 & & Relationships \\
+			 & & School/Community \\
+			 \bottomrule
+		\end{tabular}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{\textsf{Focusing on Skills}}
+		\footnotesize\begin{tabular}{ccl}
+			\toprule
+			\multirow{9}{*}{\parbox[l]{5cm}{\flushleft\huge New Haven Social Development Curriculum \footnotesize}} & \multirow{3}{*}{\normalsize \tBold{Skills} \footnotesize} & \tBold{Self-Management} \\
+			 & & \tBold{Problem Solving and Decision Making} \\
+			 & & \tBold{Communication} \\
+			\cline{2-3}
+			 & \multirow{3}{*}{\normalsize Attitudes and Values \footnotesize} & About Self \\
+			 & & About Others \\
+			 & & About Tasks \\
+			 \cline{2-3}
+			 & \multirow{3}{*}{\normalsize Content \footnotesize} & Self/Health \\
+			 & & Relationships \\
+			 & & School/Community \\
+			 \bottomrule
+		\end{tabular}
+	\end{frame}
+
+	\begin{frame}%
+		\frametitle{\textsf{Focusing on Skills}}
+		\begin{columns}[c] % align columns
+			\begin{column}{.48\textwidth}
+				\centering\noindent\shadowimage[width=0.9\textwidth]{marshmallow-bw.png}
+			\end{column}%
+			\hfill
+			\begin{column}{.48\textwidth}
+				\Large Students can learn and get better at \tBold{utilizing specific strategies and practices at appropriate times}. Learning to apply these strategies, practices, and skills at the right time can benefit the \tBold{learner} personally and the \tBold{classroom community} more generally in the \tBold{short term} and the \tBold{long term}.\normalsize
+			\end{column}%
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{\textsf{Focusing on Attitudes and Values}}
+		\footnotesize\begin{tabular}{ccl}
+			\toprule
+			\multirow{9}{*}{\parbox[l]{5cm}{\flushleft\huge New Haven Social Development Curriculum \footnotesize}} & \multirow{3}{*}{\normalsize Skills \footnotesize} & Self-Management \\
+			 & & Problem Solving and Decision Making \\
+			 & & Communication \\
+			\cline{2-3}
+			 & \multirow{3}{*}{\normalsize \tBold{Attitudes and Values} \footnotesize} & \tBold{About Self} \\
+			 & & \tBold{About Others} \\
+			 & & \tBold{About Tasks} \\
+			 \cline{2-3}
+			 & \multirow{3}{*}{\normalsize Content \footnotesize} & Self/Health \\
+			 & & Relationships \\
+			 & & School/Community \\
+			 \bottomrule
+		\end{tabular}
+	\end{frame}
+
+	\begin{frame}%
+		\frametitle{\textsf{Focusing on Attitudes and Values}}
+		\begin{columns}[c] % align columns
+			\begin{column}{.48\textwidth}
+				\Large Attitudes and values are what direct our attention and help us build meaning in our work. We \tBold{enter the classroom} with attitudes and values towards ourselves, others, and the work we do. These attitudes and values are not static; they \tBold{can change} with \tBold{intentional effort} and even the occasional \tBold{nudge}.\normalsize
+			\end{column}%
+			\hfill
+			\begin{column}{.48\textwidth}
+				\centering\noindent\shadowimage[width=0.9\textwidth]{cat-bw.png}
+			\end{column}%
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{\textsf{Focusing on Content}}
+		\footnotesize\begin{tabular}{ccl}
+			\toprule
+			\multirow{9}{*}{\parbox[l]{5cm}{\flushleft\huge New Haven Social Development Curriculum \footnotesize}} & \multirow{3}{*}{\normalsize Skills \footnotesize} & Self-Management \\
+			 & & Problem Solving and Decision Making \\
+			 & & Communication \\
+			\cline{2-3}
+			 & \multirow{3}{*}{\normalsize Attitudes and Values \footnotesize} & About Self \\
+			 & & About Others \\
+			 & & About Tasks \\
+			 \cline{2-3}
+			 & \multirow{3}{*}{\normalsize \tBold{Content} \footnotesize} & \tBold{Self/Health} \\
+			 & & \tBold{Relationships} \\
+			 & & \tBold{School/Community} \\
+			 \bottomrule
+		\end{tabular}
+	\end{frame}
+
+	\begin{frame}%
+		\frametitle{\textsf{Focusing on Content}}
+		\begin{columns}[c] % align columns
+			\begin{column}{.48\textwidth}
+				\centering\noindent\shadowimage[width=0.9\textwidth]{content-bw.png}
+			\end{column}%
+			\hfill
+			\begin{column}{.48\textwidth}
+				\Large Content, or \tBold{knowledge}, serves as the building blocks for a social and emotional approach to teaching and learning. Deeply \tBold{understanding the connections} between self, health, relationships, and community fosters the development of skills, practices, attitudes, and values.\normalsize
+			\end{column}%
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{\textsf{The Role of Caring}}
+		\Large "Caring is central to the shaping of relationships that are meaningful, supportive, rewarding, and productive. Caring happens when children sense that the adults in their lives think they are important and when they understand that they will be accepted and respected, regardless of any particular talents they have." \normalsize
+		\vspace{2em}
+				\begin{flushright}
+					\tiny (Elias et al., 1997)
+				\end{flushright}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{\textsf{The Role of Caring}}
+		\Large "Caring is a product of a community that deems all of its members to be important, believes everyone has something to contribute, and acknowledges that everyone counts. \tBold{We work better when we care and when we are cared about, and \underline{so do students}.}" \normalsize
+		\vspace{2em}
+				\begin{flushright}
+					\tiny (Elias et al., 1997)
+				\end{flushright}
+	\end{frame}
+
+\end{document}
