@@ -4,6 +4,9 @@
 *.gz
 *.gz(busy)
 *.out
+*.nav
+*.snm
+*.toc
 
 # This is a course, so also ignore the 'readings' folder which can be retrieved from institutional libraries
 /readings
