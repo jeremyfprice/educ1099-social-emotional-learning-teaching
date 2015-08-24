@@ -1,0 +1,191 @@
+%!TEX program = lualatex
+
+\documentclass[aspectratio=169]{beamer}
+%\documentclass[12pt,t]{beamer}
+\beamertemplatenavigationsymbolsempty
+\usetheme{default}
+\usepackage{graphicx}
+\graphicspath{{presentation2-img/}}
+\setbeameroption{hide notes}
+\setbeamertemplate{note page}[plain]
+\setbeamerfont{frametitle}{size=\huge}
+
+\usefonttheme{professionalfonts} % using non standard fonts for beamer
+\usefonttheme{serif} % default family is serif
+\usepackage{fontspec}
+\setmainfont[Renderer=Basic, Numbers=OldStyle, Scale = 1.0]{Noto Serif}
+\setsansfont[Renderer=Basic, Numbers=OldStyle, Scale = 1.0]{Noto Sans}
+\setmonofont{Deja Vu Sans Mono}
+
+\usepackage{color}
+\usepackage{microtype}
+
+\usepackage{booktabs}
+\usepackage{array,multirow}
+
+\usepackage{csquotes}
+\MakeOuterQuote{"}
+
+
+\usepackage{tikz}
+\usetikzlibrary{shadows,calc}
+
+% code adapted from http://tex.stackexchange.com/a/11483/3954
+
+% some parameters for customization
+\def\shadowshift{3pt,-3pt}
+\def\shadowradius{6pt}
+\colorlet{innercolor}{black!60}
+\colorlet{outercolor}{gray!05}
+
+% this draws a shadow under a rectangle node
+\newcommand\drawshadow[1]{
+	\begin{pgfonlayer}{shadow}
+		\shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.south west)+(\shadowshift)+(\shadowradius/2,\shadowradius/2)$) circle (\shadowradius);
+		\shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) circle (\shadowradius);
+		\shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) circle (\shadowradius);
+		\shade[outercolor,inner color=innercolor,outer color=outercolor] ($(#1.north east)+(\shadowshift)+(-\shadowradius/2,-\shadowradius/2)$) circle (\shadowradius);
+		\shade[top color=innercolor,bottom color=outercolor] ($(#1.south west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) rectangle ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$);
+		\shade[left color=innercolor,right color=outercolor] ($(#1.south east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$);
+		\shade[bottom color=innercolor,top color=outercolor] ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$);
+		\shade[outercolor,right color=innercolor,left color=outercolor] ($(#1.south west)+(\shadowshift)+(-\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north west)+(\shadowshift)+(\shadowradius/2,-\shadowradius/2)$);
+		\filldraw ($(#1.south west)+(\shadowshift)+(\shadowradius/2,\shadowradius/2)$) rectangle ($(#1.north east)+(\shadowshift)-(\shadowradius/2,\shadowradius/2)$);
+	\end{pgfonlayer} }
+% create a shadow layer, so that we don't need to worry about overdrawing other things
+\pgfdeclarelayer{shadow}
+\pgfsetlayers{shadow,main}
+\newsavebox\mybox
+\newlength\mylen
+\newcommand\shadowimage[2][]{%
+	\setbox0=\hbox{\includegraphics[#1]{#2}}
+	\setlength\mylen{\wd0}
+	\ifnum\mylen<\ht0
+		\setlength\mylen{\ht0}
+	\fi
+	\divide \mylen by 120
+	\def\shadowshift{\mylen,-\mylen}
+	\def\shadowradius{\the\dimexpr\mylen+\mylen+\mylen\relax}
+	\begin{tikzpicture}
+		\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[#1]{#2}};
+		\drawshadow{image}
+	\end{tikzpicture}}
+
+\definecolor{bgcolor}{RGB}{255,255,243}
+\definecolor{FSUred}{RGB}{134,0,56}
+\definecolor{fgblack}{RGB}{0,0,0} % I can't seem to figure out a way around this...
+
+\setbeamercolor{background canvas}{bg=bgcolor}
+\setbeamercolor{titlelike}{fg=fgblack}
+\setbeamercolor{subtitle}{fg=fgblack}
+\setbeamercolor{frametitle}{fg=FSUred}
+\setbeamercolor{subtitle}{fg=FSUred}
+
+\author{EDUC1199}
+\date{19 August 2015}
+\title{\Huge\textsf{A FRAMEWORK}\normalsize}
+\subtitle{For Social and Emotional Approaches to Teaching and Learning}
+
+\newcommand{\tBold}[1]{\textcolor{FSUred}{\textbf{#1}}}
+
+\begin{document}
+	\begin{frame}
+
+		\vfill
+
+		\maketitle
+
+		\vfill
+
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{\textsf{A Review of the Framework}}
+		\footnotesize\begin{tabular}{ccl}
+			\toprule
+			\multirow{9}{*}{\parbox[l]{3cm}{\raggedright\large New Haven Social Development Curriculum \footnotesize}} & \multirow{3}{*}{\normalsize Skills \footnotesize} & Self-Management \\
+			 & & Problem Solving and Decision Making \\
+			 & & Communication \\
+			\cline{2-3}
+			 & \multirow{3}{*}{\normalsize Attitudes and Values \footnotesize} & About Self \\
+			 & & About Others \\
+			 & & About Tasks \\
+			 \cline{2-3}
+			 & \multirow{3}{*}{\normalsize Content \footnotesize} & Self/Health \\
+			 & & Relationships \\
+			 & & School/Community \\
+			 \bottomrule
+		\end{tabular}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{\textsf{How is the framework represented?}}
+		\footnotesize\begin{tabular}{ccl}
+			\toprule
+			\multirow{9}{*}{\parbox[l]{3cm}{\raggedright\large New Haven Social Development Curriculum \footnotesize}} & \multirow{3}{*}{\normalsize Skills \footnotesize} & Self-Management \\
+			 & & Problem Solving and Decision Making \\
+			 & & Communication \\
+			\cline{2-3}
+			 & \multirow{3}{*}{\normalsize Attitudes and Values \footnotesize} & About Self \\
+			 & & About Others \\
+			 & & About Tasks \\
+			 \cline{2-3}
+			 & \multirow{3}{*}{\normalsize Content \footnotesize} & Self/Health \\
+			 & & Relationships \\
+			 & & School/Community \\
+			 \bottomrule
+		\end{tabular}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{\textsf{What emotions do}}
+		{\Large}“{\ldots}[E]motions \textit{organize} \textendash rather than disrupt \textendash our social lives. Studies have found, for example, that emotions \textit{structure} (not just color) such disparate social interactions as attachment between parents and children, sibling conflicts, flirtations between young courters and negotiations between rivals.”
+		\vspace{2em}
+		\begin{flushright}
+			\tiny (Keltner \& Ekman, 2015)
+		\end{flushright}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{\textsf{Recognizing the full spectrum of emotions}}
+		{\Large}“‘Inside Out’ offers a new approach to sadness. Its central insight: Embrace sadness, let it unfold, engage patiently with a preteen's emotional struggles. Sadness will clarify what has been lost (childhood) and move the family toward what is to be gained: the foundations of new identities, for children and parents alike.”
+		\vspace{2em}
+		\begin{flushright}
+			\tiny (Keltner \& Ekman, 2015)
+		\end{flushright}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{\textsf{Recognizing the full spectrum of emotions}}
+		\begin{columns}[c] % align columns
+			\begin{column}{.48\textwidth}
+				{\Large}“Toward the end of the movie, Joy does what some researchers now consider to be the healthiest method for working with emotions: Instead of avoiding or denying Sadness, Joy accepts Sadness for who she is, realizing that she is an important part of Riley’s emotional life.”
+				\vspace{2em}
+				\begin{flushright}
+					\tiny (Marsh \& Zakrzewski, 2015)
+				\end{flushright}
+			\end{column}%
+			\hfill
+			\begin{column}{.48\textwidth}
+				\centering\noindent\shadowimage[width=0.9\textwidth]{Inside_Out_Joy_and_Sadness.jpg}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{\textsf{Recognizing the full spectrum of emotions}}
+		\begin{columns}[c] % align columns
+			\begin{column}{.48\textwidth}
+				{\Large}“Emotion experts call this ‘mindfully embracing’ an emotion. What does that mean? Rather than getting caught up in the drama of an emotional reaction, a mindful person kindly observes the emotion without judging it as the right or wrong way to feel in a given situation, creating space to choose a healthy response.”
+				\vspace{2em}
+				\begin{flushright}
+					\tiny (Marsh \& Zakrzewski, 2015)
+				\end{flushright}
+			\end{column}%
+			\hfill
+			\begin{column}{.48\textwidth}
+				\centering\noindent\shadowimage[width=0.9\textwidth]{Inside_Out_Joy_and_Sadness.jpg}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+\end{document}

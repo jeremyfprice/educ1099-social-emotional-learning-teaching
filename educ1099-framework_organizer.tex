@@ -1,0 +1,27 @@
+\documentclass[landscape]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontawesome}
+\usepackage{fontspec}
+\setmainfont[Renderer=Basic, Numbers=OldStyle, Scale = 1.0]{Noto Serif}
+\setsansfont[Renderer=Basic, Numbers=OldStyle, Scale = 1.0]{Noto Sans}
+\setmonofont{Deja Vu Sans Mono}
+% The following package makes prettier tables.  We're all about the bling!
+\usepackage{booktabs}
+
+\begin{document}
+	\begin{tabular}{ccll}
+		\toprule
+		\multirow{9}{*}{\parbox[l]{3cm}{\raggedright\large New Haven Social Development Curriculum \footnotesize}} & \multirow{3}{*}{\normalsize Skills \footnotesize} & Self-Management & \multirow{3}{*}{test} \\
+		 & & Problem Solving and Decision Making & \\
+		 & & Communication & \\
+		\cline{2-3}
+		 & \multirow{3}{*}{\normalsize Attitudes and Values \footnotesize} & About Self & \multirow{3}{*}{test} \\
+		 & & About Others & \\
+		 & & About Tasks & \\
+		 \cline{2-3}
+		 & \multirow{3}{*}{\normalsize Content \footnotesize} & Self/Health & \multirow{3}{*}{test} \\
+		 & & Relationships & \\
+		 & & School/Community & \\
+		 \bottomrule
+	\end{tabular}
+\end{document}
